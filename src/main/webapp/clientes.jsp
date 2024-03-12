@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,12 +16,9 @@
         <!-- Botones de navegacion -->
         <jsp:include page="WEB-INF/paginas/comunes/botonesNavegacion.jsp"/>
 
+        <!-- Listado de clientes -->
+        <jsp:include page="WEB-INF/paginas/cliente/listadoClientes.jsp"/>
 
-        <ul>
-            <c:forEach var="cliente" items="${clientes}">
-                <li>${cliente.id} ${cliente.nombre} ${cliente.apellido} ${cliente.saldo}</li>
-                </c:forEach>
-        </ul>
         <!-- Pie de pagina -->
         <jsp:include page="WEB-INF/paginas/comunes/piePagina.jsp"/>
 
