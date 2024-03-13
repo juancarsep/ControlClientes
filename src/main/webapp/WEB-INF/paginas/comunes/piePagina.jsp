@@ -2,7 +2,7 @@
     <div class="container">
         <div class="col">
             <p class="lead text-center">
-                Copyrigth &copy; Jics Innovations
+                Copyrigth &copy; <strong>Jics Innovations</strong>
             </p>
         </div>
     </div>

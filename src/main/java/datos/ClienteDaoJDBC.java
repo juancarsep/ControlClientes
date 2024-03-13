@@ -14,7 +14,7 @@ public class ClienteDaoJDBC {
     private static final String SQL_SELECT_BY_ID = "SELECT id, nombre, apellido, email, telefono, saldo FROM control_clientes.cliente WHERE id = ?";
     private static final String SQL_INSERT = "INSERT INTO control_clientes.cliente(nombre,apellido,email,telefono,saldo) VALUES(?, ?, ?, ?, ?)";
     private static final String SQL_UPDATE = "UPDATE control_clientes.cliente SET nombre = ?, apellido = ?, email = ?, telefono = ?, saldo = ? WHERE id = ?";
-    private static final String SQL_DELETE = "DELETE FROM contol_clientes.cliente WHERE id = ?";
+    private static final String SQL_DELETE = "DELETE FROM control_clientes.cliente WHERE id = ?";
 
     public List<Cliente> listar() {
         Connection conn = null;
@@ -55,20 +55,21 @@ public class ClienteDaoJDBC {
             stmt = conn.prepareStatement(SQL_SELECT_BY_ID);
             stmt.setInt(1, cliente.getId());
             rs = stmt.executeQuery();
-            rs.absolute(1);//posiciona en el primer registro devuelto
 
-            int idCliente = rs.getInt("id");
-            String nombre = rs.getString("nombre");
-            String apellido = rs.getString("apellido");
-            String email = rs.getString("email");
-            String telefono = rs.getString("telefono");
-            double saldo = rs.getDouble("saldo");
+            if (rs.next()) {
+                int idCliente = rs.getInt("id");
+                String nombre = rs.getString("nombre");
+                String apellido = rs.getString("apellido");
+                String email = rs.getString("email");
+                String telefono = rs.getString("telefono");
+                double saldo = rs.getDouble("saldo");
 
-            cliente.setNombre(nombre);
-            cliente.setApellido(apellido);
-            cliente.setEmail(email);
-            cliente.setTelefono(telefono);
-            cliente.setSaldo(saldo);
+                cliente.setNombre(nombre);
+                cliente.setApellido(apellido);
+                cliente.setEmail(email);
+                cliente.setTelefono(telefono);
+                cliente.setSaldo(saldo);
+            }
 
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
