@@ -1,4 +1,4 @@
-<header>
+<header class="py-2 bg-info text-white">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
