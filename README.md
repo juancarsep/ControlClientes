@@ -27,10 +27,13 @@ This repository contains a Java web application built with Maven for dependency 
 5. Build and deploy the application using Maven and Glassfish Server.
 
 ## Index
-![image](https://github.com/juancarsep/ControlClientes/assets/129075685/33c9d0c6-f6be-40c5-9a01-2e4d6df6d34d)
+![image](https://github.com/juancarsep/ControlClientes/assets/129075685/52df14d8-7d27-45c4-9986-90a19f59259b)
+
 
 ## Edit & Remove
-![image](https://github.com/juancarsep/ControlClientes/assets/129075685/8b244b5d-cd88-4712-8402-b0b5194b8fb8)
+![image](https://github.com/juancarsep/ControlClientes/assets/129075685/d603179d-8b2b-4954-8be3-9a45e4233377)
+
 
 ## Add client
-![image](https://github.com/juancarsep/ControlClientes/assets/129075685/e4f502a2-75fd-4cf1-bf75-7e783ddb254b)
+![image](https://github.com/juancarsep/ControlClientes/assets/129075685/5fa0e292-bdb6-4ad1-9b4d-feb82dcaab06)
+
